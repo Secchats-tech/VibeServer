@@ -1,8 +1,8 @@
-# Vibe-code a SecChats server
+# Vibe-code a Secure Chats server
 
 Two long, self-contained prompts that instruct a frontier LLM to produce a
 complete, runnable HTTP server implementing the
-[SecChats JSON API](https://secchats.com/api.html) — one in Python
+[Secure Chats JSON API](https://secchats.com/api.html) — one in Python
 (FastAPI), one in Node.js (Fastify). Paste one into your favourite model
 and follow the definition-of-done checklist to verify the output.
 
@@ -45,7 +45,7 @@ will usually converge in one or two follow-ups.
    pass on the first try. If not, paste the failing pytest / `node --test`
    output back into the same conversation — do **not** start a fresh chat,
    the model's context of the spec matters.
-5. Sanity-check against a real client (the SecChats iOS or Android app,
+5. Sanity-check against a real client (the Secure Chats iOS or Android app,
    or `curl` scripts of your own) if you plan to deploy.
 
 ## Prompt A — Python (FastAPI + Pydantic + sqlite3 + uvicorn)
@@ -55,7 +55,7 @@ inline. **~270 lines, one self-contained block:**
 
 ```
 You are an expert Python backend engineer. Build a complete, runnable
-HTTP API server implementing the SecChats JSON API specified at
+HTTP API server implementing the Secure Chats JSON API specified at
 https://secchats.com/api.html.
 
 The spec is the contract. Read it. The summary in this prompt is a
@@ -243,7 +243,7 @@ Same contract, same zero-trust guarantees, JavaScript stack.
 
 ```
 You are an expert Node.js backend engineer. Build a complete, runnable
-HTTP API server implementing the SecChats JSON API specified at
+HTTP API server implementing the Secure Chats JSON API specified at
 https://secchats.com/api.html.
 
 The spec is the contract. Read it. The summary in this prompt is a
@@ -504,7 +504,7 @@ what fails on the second run:
 The prompts already contain those mitigations; the failure modes are
 listed here so you know what to look for if a model deviates.
 
-**Can I use this to run a public SecChats server?**
+**Can I use this to run a public Secure Chats server?**
 Yes, but the prompts produce a **minimum-viable** server. Before
 exposing it: put it behind TLS, cap upload sizes, add persistent rate-
 limit storage (the in-memory bucket resets on restart), and audit the
