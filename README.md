@@ -1,6 +1,12 @@
 # Vibe-code a Secure Chats server
 
-Two long, self-contained prompts that instruct a frontier LLM to produce a
+This project is the working companion to the [Secure Chats Whitepaper.](https://secchats.com/whitepaper.html) 
+The paper's central claim is that a private messenger's server should be small enough to specify as an LLM prompt — 
+small enough that anyone can regenerate a compatible one and verify the reference server behaves the same way.
+The two prompts in this repo are that specification, ready to paste into your favourite frontier LLM 
+(Python or Node.js flavours).
+
+These long, self-contained prompts instruct a frontier LLM to produce a
 complete, runnable HTTP server implementing the
 [Secure Chats JSON API](https://secchats.com/api.html) — one in Python
 (FastAPI), one in Node.js (Fastify). Paste one into your favourite model
